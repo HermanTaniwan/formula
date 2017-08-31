@@ -6,7 +6,7 @@ import {
 	StyleSheet,
 	FlatList
 } from 'react-native';
-
+import {ListItem} from 'react-native-elements';
 
 export default class HomeScreen extends Component {
 
@@ -20,9 +20,9 @@ export default class HomeScreen extends Component {
 			<View style={styles.container}>
 				
 				<FlatList
-				  data={[{key: 'a'}, {key: 'b'}]}
-				  renderItem={({item}) => <Text>{item.key}</Text>}
-				/>
+  data={[{title: 'Title Text', key: 'item1'}]}
+  renderItem={({item}) => <ListItem title={item.key} />}
+/>
 
 			</View>
 		)
